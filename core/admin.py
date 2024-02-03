@@ -6,8 +6,8 @@ class ProductImagesAdmin(admin.TabularInline):
 
 class ProductAdmin(admin.ModelAdmin):
     inlines = [ProductImagesAdmin]
-    list_editable = ['title', 'price','old_price', 'colors', 'category']
-    list_display = ['user', 'title', 'product_image', 'price', 'old_price', 'colors', 'category', 'pid']
+    list_editable = ['title', 'price', 'image', 'old_price', 'colors', 'category']
+    list_display = ['user', 'title', 'image', 'price', 'old_price', 'colors', 'category', 'pid']
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ['title', 'category_image']
