@@ -60,7 +60,7 @@
                                             </div>
                                             <div class="product-content-wrap">
                                                 <div class="product-category">
-                                                    <a href=""><span style="color:#3BB77E !important">{{ p.colors }}</span></a>
+                                                    <a href=""><span style="color:#ef1f5a !important">{{ p.colors }}</span></a>
                                                 </div>
                                                 <h2 style="font-size: 18px;"><a href="{% url 'core:product-detail' p.pid %}">{{ p.title }}</a></h2>
                                                 <div class="product-rate-cover">
@@ -72,15 +72,15 @@
                                                     <i class="fas fa-star text-warning"></i>
                                                     <i class="fas fa-star text-warning"></i>
                                                     <i class="fas fa-star text-warning"></i>
-                                                    <span class="font-small ml-5 text-muted"> ({{ p.reviews.all.count }}) Reviews</span>
+                                                    <span class="font-small ml-5"> ({{ p.reviews.all.count }}) Reviews</span>
                                                 </div>
                                                 <div>
                                                     <span class="font-small text-muted">{{ p.category.title }}</a></span>
                                                 </div>
                                                 <div class="product-card-bottom">
                                                     <div class="product-price">
-                                                        <span>₦</span> <span class="current-product-price-{{ p.id }}">{{p.price}}</span>
-                                                        <span class="old-price">₦{{p.old_price}}</span>
+                                                        <span>₦</span> <span class="current-product-price-{{ p.id }}" style="font-size: 17px;">{{p.price}}</span>
+                                                        <span class="old-price" style="font-size: 16px;">₦{{p.old_price}}</span>
                                                     </div>
                                                     <div class="add-cart">
                                                         <input type="hidden" value="1" id="product-quantity" class="product-quantity-{{ p.id }}">
@@ -1758,7 +1758,6 @@
                                 <!--End product-grid-4-->
                             </div>
 
-                            #dont
                             <!--En tab five-->
                             <div class="tab-pane fade" id="tab-six" role="tabpanel" aria-labelledby="tab-six">
                                 <div class="row product-grid-4">

@@ -21,7 +21,7 @@
                     <div class="text">
                         <h6 class="mb-1 card-title">Revenue</h6>
                         <!-- <span>$13,456.5</span> -->
-                        <span>${{ revenue.price|floatformat:2|intcomma }}</span>
+                        <span>₦{{ revenue.price|floatformat:0|intcomma }}</span>
                         <span class="text-sm"> Shipping fees are not included </span>
                     </div>
                 </article>
@@ -58,7 +58,7 @@
                     <div class="text">
                         <h6 class="mb-1 card-title">Monthly Earning</h6>
                         <!-- <span>$6,982</span> -->
-                        <span>{{ monthly_revenue.price|floatformat:2|intcomma }}</span>
+                        <span>{{ monthly_revenue.price|floatformat:0|intcomma }}</span>
                         <span class="text-sm"> Based in your local time. </span>
                     </div>
                 </article>
@@ -130,7 +130,7 @@
                                 <td><a href="#" class="fw-bold">#{{l.sku}}</a></td>
                                 <td>{{l.user.username|title}}</td>
                                 <td>{{l.order_date}}</td>
-                                <td>${{l.price}}</td>
+                                <td>₦{{l.price}}</td>
                                 <td>
                                     {% if l.paid_status == True %}
                                     <span class="badge badge-pill badge-soft-success">Paid</span>
